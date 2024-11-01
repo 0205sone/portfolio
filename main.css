@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 body {         
-    background-image: url();
+    background-color: #FFE9F3;
     text-align:center;
     font-family: "Zen Maru Gothic", serif;
     font-weight: bold;
@@ -18,10 +18,10 @@ h1 {
 }
 .heading-40 {
     padding: .5em .7em;
-    background-image: linear-gradient(45deg, #ed66ff12 25%, transparent 25%, transparent 50%, #ed66ff12 50%, #ed66ff12 75%, transparent 75%, transparent), linear-gradient(-45deg, #ed66ff12 25%, transparent 25%, transparent 50%, #ed66ff12 50%, #ed66ff12 75%, transparent 75%, transparent);
-    background-color: #ed66ff0d;
+    background-image: linear-gradient(45deg, #b7ade912 25%, transparent 25%, transparent 50%, #b7ade912 50%, #b7ade912 75%, transparent 75%, transparent), linear-gradient(-45deg, #b7ade912 25%, transparent 25%, transparent 50%, #b7ade912 50%, #b7ade912 75%, transparent 75%, transparent);
+    background-color: #ffffff;
     background-size: 20px 20px;
-    color: #ed66ff;
+    color: #b7ade9;
 }
 h2 {
     font-family: "Dela Gothic One", sans-serif;  
@@ -32,16 +32,15 @@ h2 {
         width: 400px;
     
         }
-h4{
 
-}
 .box-001 {
     position: relative;
     max-width: 400px;
     margin: 0 auto;
     padding: calc(1em + 25px) 1.5em 1em;
-    border: 2px solid #f7bdff;
+    border: 2px solid #b7ade9;
     border-radius: 5px;
+    background-color: #ffffff;
     overflow: auto;
 }
 
@@ -51,7 +50,7 @@ h4{
     left: 0;
     width: 100%;
     height: 25px;
-    background-color: #f7bdff;
+    background-color: #b7ade9;
 }
 
 .box-001 p {
