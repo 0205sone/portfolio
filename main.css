@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 p.img-nazotoki img {
     text-align:center;
     width: 80%;
@@ -10,4 +12,9 @@ p.img-nazotoki img {
         width: 80%;
         padding:5% 10% ;
     
+        }
+
+        body {
+            background-image: url();
+            text-align:center;
         }
