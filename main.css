@@ -8,13 +8,20 @@ body {
 }
 
 p.img-nazotoki img {
-    width: 500px;
+    width: 400px;
 
     }
 h1 {
     font-family: "Dela Gothic One", sans-serif;  
     font-weight: 400;
     font-style: normal;  
+}
+.heading-40 {
+    padding: .5em .7em;
+    background-image: linear-gradient(45deg, #ed66ff12 25%, transparent 25%, transparent 50%, #ed66ff12 50%, #ed66ff12 75%, transparent 75%, transparent), linear-gradient(-45deg, #ed66ff12 25%, transparent 25%, transparent 50%, #ed66ff12 50%, #ed66ff12 75%, transparent 75%, transparent);
+    background-color: #ed66ff0d;
+    background-size: 20px 20px;
+    color: #ed66ff;
 }
 h2 {
     font-family: "Dela Gothic One", sans-serif;  
@@ -27,4 +34,27 @@ h2 {
         }
 h4{
 
+}
+.box-001 {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: calc(1em + 25px) 1.5em 1em;
+    border: 2px solid #f7bdff;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.box-001 svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background-color: #f7bdff;
+}
+
+.box-001 p {
+    margin: 0;
+    padding: 0;
 }
