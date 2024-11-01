@@ -1,16 +1,30 @@
 @charset "utf-8";
 
+body {         
+    background-image: url();
+    text-align:center;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: bold;
+}
+
 p.img-nazotoki img {
     width: 500px;
 
     }
-
+h1 {
+    font-family: "Dela Gothic One", sans-serif;  
+    font-weight: 400;
+    font-style: normal;  
+}
+h2 {
+    font-family: "Dela Gothic One", sans-serif;  
+    font-weight: 400;
+    font-style: normal;  
+}
     p.img-27-4 img {
         width: 400px;
     
         }
+h4{
 
-        body {
-            background-image: url();
-            text-align:center;
-        }
+}
