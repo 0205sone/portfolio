@@ -22,6 +22,14 @@ p.img-nazotoki img {
             margin-top: 20px;
         
             }
+            p.img-onkyo img {
+                width: 80%;
+            
+                }
+                p.img-nazop24img {
+                    width: 80%;
+                
+                    }
 h1 {
     font-family: "Dela Gothic One", sans-serif;  
     font-weight: 400;
@@ -44,16 +52,10 @@ h2 {
     
         }
 
-h4 {
-    padding: 0.5rem 0;
-    margin-bottom: 0.2rem;
-    border-bottom: 6px double #b7abe9;
-    font-weight: bold;
-    font-size: 26px;
-}
+
 
         .box-003 {
-            max-width: 500px;
+            max-width: 600px;
             margin: 0 auto;
             padding: 1em 1.5em;
             box-shadow: 0 4px 4px rgb(0 0 0 / 5%), 0 2px 3px -2px rgb(0 0 0 / 1%);
@@ -63,30 +65,7 @@ h4 {
             background-color: #ffffff;
             color: #000000;
         }
-.box-001 {
-    position: relative;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: calc(1em + 25px) 1.5em 1em;
-    border: 2px solid #b7ade9;
-    border-radius: 5px;
-    background-color: #ffffff;
-    overflow: auto;
-}
 
-.box-001 svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 25px;
-    background-color: #b7ade9;
-}
-
-.box-001 p {
-    margin: 0;
-    padding: 0;
-}
 .footer-001 {
     display: flex;
     align-items: center;
@@ -122,4 +101,13 @@ h4 {
     color: #ffffffb3;
     font-weight: 200;
     font-size: .8em;
+}
+h4 {
+    padding: 0.5rem 0;
+    margin-bottom: 0.2rem;
+    border-bottom: 6px double #b7abe9;
+    border-left: auto;
+    border-right: auto; 
+    font-weight: bold;
+    font-size: 20px;
 }
