@@ -1,237 +1,318 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Portfolio - 0205sone</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="main.css"> 
-    <title>portfolio</title>
 </head>
 
 <body>
 
-<h1 class="heading-40">portfolio</h1>
-<a class="pagetop" href="#"><div class="pagetop__arrow"></div></a>
- <h2>♡About me♡</h2>
- <div class="box-003">
- <p>公大高専3年　Iコース<br>
-現代音楽部　♰解き放たれし冥界のモンスター♰　ベースとボーカル<br>
-学友会執行部　広報課<br>
-趣味はおいしいものを食べること<br>
-</p>
-</div>
+    <header class="site-header">
+        <h1 class="site-title">portfolio</h1>
+        
+        <button class="hamburger-menu" id="js-hamburger">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        
+        <nav class="navigation" id="js-nav">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skill">Skill</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
- <h2>skill</h2>
- <div class="box-003">
- <h4>プログラミング</h4>
- <br>
- Python<br>
- 授業で習った程度<br>
- Arduino<br>
- 授業で習った程度<br>
- Scratch<br>
- 授業で習った程度<br>
- HTML,CSS<br>
- 授業で習った程度＋独学<br>
+    <main>
+        <section id="about">
+            <h2 class="heading-40">♡About me♡</h2>
+            <div class="box-003 center">
+                <p>
+                    公大高専3年　Iコース<br>
+                    現代音楽部<br>♰解き放たれし冥界のモンスター♰<br>
+                    ベースとボーカル<br>
+                    学友会執行部　広報課<br>
+                    趣味はおいしいものを食べること
+                </p>
+            </div>
+        </section>
 
-<h4>その他</h4>
-<br>
-illustrator<br>
-執行部にて使用。独学でポスターを作れる。<br>
-CLIP STUDIO PAINT EX<br>
-独学。ある程度の機能を使いイラストやロゴを作成できる。<br>
-<br>
-</div>
-<h2>projects</h2>
-
-<p>
-
-<h3>プログラミング<br></h3>
-
-<div class="box-003">
-
-<h4> プログラミング1課題4　アイドルプロデュースゲーム</h4><br>
-
-
-    <a href="https://colab.research.google.com/drive/1HzJR5bcQtUZVFxOQuyU5XK5jdHvtNPS1#scrollTo=m47fJA7hWFj4">リンク</a><br>
-<p class="img-idol">
-    <img src="idol.png" alt="アイドル育成ゲーム"></p><br>
-    プログラミング1の自由課題。<br>
-    アイドルマスターのようなアイドル育成ゲームをPythonで作成しました。<br>
-</div>
-
-  <br>
-  <div class="box-003">
-
-
-    <h4>第60回高専祭　知能情報コース展示　クイズリバーシ</h4><br>
-
-
-<a href="https://yurei0903.github.io/power2_7-4-main/">リンク</a><br>
-<p class="img-Quizreversi">
-    <img src="kuizuriba-si.jpg" alt="クイズリバーシ"></p><br>
-クイズに正解すると石を置けるというルールのリバーシを班員で作成しました。<br>
-ロゴ作成、UIのデザイン、一部プログラミングを担当しました。<br>
-</div>
-
-<br>
-<div class="box-003">
-
-
-  <h4>ベース用チューナー</h4><br>
-<a href="https://github.com/0205sone/bass">リンク</a><br>
-<p class="img-bass">
-  <img src="bass4.png" alt="ベース用チューナー4"></p><br>
-
-
-制作時期2024年12月～2025年1月<br>
-日常使いできるようなシンプルなベース用チューナーを自由課題で作成しました。
-pygame、sounddevice、numpy、librosaというライブラリを使用して、マイクで拾った音の周波数をとり、
-それがE,A,D,Gの音階とどれだけずれているかを数値化し、表示させるという仕組みでチューナーを作りました。<br>
-<br>
-使い方<br>
-<br>
-detected Pitch:鳴らしている音の周波数<br>
-target:合わせたい音階の周波数<br>
-Difference:どれだけずれているかの表示<br><br>
-<p class="img-bass">
-  <img src="bass1.png" alt="ベース用チューナー1"></p><br>
-
-
-
-1.合わせたい音階のボタンをクリック<br>
-2.ベースを弾く。
-この時Differenceの欄にどれだけずれているかが表示されるので、
-プラスマイナスを見ながらペグを回す。<br>
-<p class="img-bass">
-  <img src="bass3.png" alt="ベース用チューナー3"></p><br>
-音階があっているときは文字が赤から緑に変化する。<br>
-<p class="img-bass">
-  <img src="bass2.png" alt="ベース用チューナー2"></p><br>
-
-3.他の弦も同じように合わせる。<br>
-<br>
-
-
-</div>
-<br>
-<div class="box-003">
-
-
-  <h4>家計簿アプリ</h4><br>
-<a href="https://github.com/0205sone/kakeibo">リンク</a><br>
-
-制作時期2025年2月中　約10時間<br>
-この家計簿アプリは、日々の支出を簡単に記録・管理できるPySide6を使用したGUIアプリです。<br>
-支出項目、金額、日付を入力すると、一覧表に追加され、自動的にCSVファイルに保存されます。<br>
-<p class="img-kakeibo">
-  <img src="kakeibo1.png" alt="家計簿1"></p><br>
-過去の入力履歴から項目を選択でき、日付はカレンダーで選択可能です。<br>
-<p class="img-kakeibo">
-  <img src="kakeibo2.png" alt="家計簿2"></p><br>
-  <p class="img-kakeibo">
-    <img src="kakeibo3.png" alt="家計簿3"></p><br>
-特定の月を選ぶと、その月の合計支出を表示できます。<br>
-また、CSVファイルをExcelで確認することもできます。<br>
-<p class="img-kakeibo">
-  <img src="kakeibo4.png" alt="家計簿4"></p><br>
-データはアプリを閉じても保存され、継続的に家計管理ができます。<br>
-
-</div>
-<br>
-<div class="box-003">
-
-<h4> あんさんぶるスターズ!!進捗管理サイト</h4><br>
-
-
-    <a href="https://0205sone.github.io/es-todo/">リンク</a><br>
-<p class="img-EStodo">
-    <img src="estodo.png" alt="あんスタTODO"></p><br>
-    TODOリストを改良しあんスタのイベントの進捗を管理できるサイトを作成しました。<br>
-</div>
-
-  <br>
-<h3>ロゴ作成<br></h3>
-
-<div class="box-003">
-<h4>第59回高専祭　謎解きロゴ</h4><br>
-<p class="img-nazotoki">
- <img src="nazotoki.png" alt="謎解きロゴ">
-</p></div>
-  <br>
-  <div class="box-003">
-<h4>高専祭展示　2⁷-4ロゴ</h4><br>
-<p class="img-27-4">
- <img src="27-4.png" alt="2⁷-4ロゴ">
-</p></div>
-<div class="box-003">
-<h4>第60回高専祭　テーマロゴ</h4><br>
-<p class="img-2025rogo">
- <img src="2025rogo.png" alt="高専祭ロゴ">
-</p></div>
-  <br>
-</p>
-
-<h3>ポスター作製<br></h3>
-
-<div class="box-003">
-<h4>第60回高専祭　ステージイベント募集ポスター</h4><br>
-<p class="img-onkyo">
- <img src="onkyo.jpg" alt="ステイべポスター"><br>
- 基本のデザインを担当しました。一部先輩の手直しあります。
-</p></div>
-<br>
-<div class="box-003">
-    <h4>第60回高専祭　謎解きポスター</h4><br>
-    <p class="img-nazop24">
-     <img src="60nazo.jpg" alt="謎解きポスター2024"><br>
-     すべてデザインを担当しました。
-    </p></div>
-    <br>
-    <div class="box-003">
-      <h4>学友会執行部勧誘ポスター</h4><br>
-      <p class="img-kanyu">
-       <img src="kanyu.png" alt="学友会執行部勧誘ポスター"><br>
-       すべてデザインを担当しました。
-      </p></div>
-    <br>
-        <div class="box-003">
-      <h4>現代音楽部勧誘ポスター</h4><br>
-      <p class="img-genonkanyu">
-       <img src="genonkanyu.png" alt="現代音楽部勧誘ポスター"><br>
-       すべてデザインを担当しました。
-      </p></div>
-    <br>
+        <section id="skill">
+            <h2 class="heading-40">skill</h2>
             <div class="box-003">
-      <h4>ステージイベント募集ポスター</h4><br>
-      <p class="img-2025suteibe">
-       <img src="2025suteibe.png" alt="ステージイベント募集ポスター"><br>
-       すべてデザインを担当しました。
-      </p></div>
-    <br>
-               <div class="box-003">
-      <h4>2025高専祭ポスター</h4><br>
-      <p class="img-2025kousensai">
-       <img src="2025kosensai.png" alt="025高専祭ポスター"><br>
-       平成レトロポップをテーマにデザインを担当しました。
-      </p></div>
-    <br>
+                <h4>プログラミング</h4>
+                <dl class="skill-list">
+                    <dt>Python</dt>
+                    <dd>基本文法習得済み。GUIアプリ・ゲーム制作、データ分析ライブラリの使用経験あり。</dd>
+                    <dt>Arduino</dt>
+                    <dd>授業でのハードウェア制御経験あり。</dd>
+                    <dt>HTML/CSS</dt>
+                    <dd>Webサイト構築・レスポンシブ対応（独学）。</dd>
+                </dl>
 
+                <h4>デザイン・その他</h4>
+                <dl class="skill-list">
+                    <dt>Illustrator</dt>
+                    <dd>学友会執行部にてポスター制作を担当。独学でイベントロゴの作成も可能。</dd>
+                    <dt>CLIP STUDIO PAINT EX</dt>
+                    <dd>イラスト作成、ロゴデザインに使用。</dd>
+                </dl>
+            </div>
+        </section>
 
-<footer class="footer-001">
-        <h2>contact</h2>
-        <br>
-        メールアドレスをクリックするとそのまま送信することができます。<br>
-    <nav>
-        <ul class="footer-001__list">
-            <li><a href="mailto:rg23066y@st.omu.ac.jp" class="footer-001__link">E-mail rg23066@st.omu.ac.jp</a></li>
-        </ul>
+        <section id="projects">
+            <h2 class="heading-40">projects</h2>
 
-    </nav>
-    
-    
-</footer>
+            <h3>プログラミング</h3>
+
+            <div class="box-003 project-item">
+                <h4>プログラミング1課題4<br>アイドルプロデュースゲーム</h4>
+                <a href="https://colab.research.google.com/drive/1HzJR5bcQtUZVFxOQuyU5XK5jdHvtNPS1#scrollTo=m47fJA7hWFj4" target="_blank" class="link-btn">Google Colabを見る</a>
+                <div class="img-container">
+                    <img src="idol.png" alt="アイドル育成ゲーム" class="work-img">
+                </div>
+                <p class="desc">
+                    プログラミング1の自由課題。<br>
+                    アイドルマスターのような育成ゲームをPythonで作成しました。
+                </p>
+            </div>
+
+            <div class="box-003 project-item">
+                <h4>第60回高専祭 知能情報コース展示<br>クイズリバーシ</h4>
+                <a href="https://yurei0903.github.io/power2_7-4-main/" target="_blank" class="link-btn">デモサイトを見る</a>
+                <div class="img-container">
+                    <img src="kuizuriba-si.jpg" alt="クイズリバーシ" class="work-img">
+                </div>
+                <p class="desc">
+                    クイズに正解すると石を置けるリバーシ。<br>
+                    <strong>担当：ロゴ作成、UIデザイン、一部コーディング</strong>
+                </p>
+            </div>
+
+            <div class="box-003 project-item">
+                <h4>ベース用チューナー</h4>
+                <a href="https://github.com/0205sone/bass" target="_blank" class="link-btn">GitHubを見る</a>
+                <div class="img-container">
+                    <img src="bass4.png" alt="ベース用チューナー" class="work-img">
+                </div>
+                <p class="desc">
+                    制作時期：2024年12月～2025年1月<br>
+                    日常使いできるシンプルなチューナーアプリ。<br>
+                    Python (pygame, sounddevice, numpy, librosa) 使用。<br>
+                    マイク入力から周波数を解析し、E,A,D,G音階とのズレを数値化・可視化しました。
+                </p>
+                <div class="sub-images">
+                    <img src="bass1.png" alt="使用イメージ" class="work-img small">
+                    <img src="bass3.png" alt="判定画面" class="work-img small">
+                </div>
+            </div>
+
+            <div class="box-003 project-item">
+                <h4>家計簿アプリ</h4>
+                <a href="https://github.com/0205sone/kakeibo" target="_blank" class="link-btn">GitHubを見る</a>
+                <p class="desc">
+                    制作時期：2025年2月（約10時間）<br>
+                    PySide6を使用したGUI家計簿アプリ。<br>
+                    CSV保存機能、カレンダー選択、月別集計機能を実装。
+                </p>
+                <div class="img-container">
+                    <img src="kakeibo1.png" alt="家計簿アプリメイン画面" class="work-img">
+                </div>
+                <div class="sub-images">
+                    <img src="kakeibo2.png" alt="カレンダー" class="work-img small">
+                    <img src="kakeibo4.png" alt="Excel出力" class="work-img small">
+                </div>
+            </div>
+            
+            <div class="box-003 project-item">
+                <h4>あんさんぶるスターズ!!<br>進捗管理サイト</h4>
+                <a href="https://0205sone.github.io/es-todo/" target="_blank" class="link-btn">サイトを見る</a>
+                <div class="img-container">
+                    <img src="estodo.png" alt="あんスタTODO" class="work-img">
+                </div>
+                <p class="desc">
+                    TODOリストを改良し、イベント進捗を管理できるWebアプリを作成。
+                </p>
+            </div>
+
+            <h3>ロゴデザイン</h3>
+            <p class="hint-text">※画像をタップすると詳細が表示されます</p>
+
+            <div class="box-003 project-item">
+                <div class="gallery-grid">
+                    <div>
+                        <img src="nazotoki.png" 
+                             alt="謎解きロゴ" 
+                             class="work-img clickable-img"
+                             data-title="第59回高専祭 謎解きロゴ"
+                             data-desc="【制作意図】
+謎解きのワクワク感を出すため、虫眼鏡と鍵のモチーフを使用しました。
+文字の一部を迷路のように加工し、『解く』楽しさを表現しています。
+
+制作時間：約3時間 / 使用ツール：Illustrator">
+                        <p>第59回高専祭 謎解きロゴ</p>
+                    </div>
+                    <div>
+                        <img src="27-4.png" 
+                             alt="2⁷-4ロゴ" 
+                             class="work-img clickable-img"
+                             data-title="高専祭展示 2⁷-4ロゴ"
+                             data-desc="展示のテーマに合わせ、デジタル感とスタイリッシュさを意識して作成しました。">
+                        <p>高専祭展示 2⁷-4ロゴ</p>
+                    </div>
+                    <div>
+                        <img src="2025rogo.png" 
+                             alt="高専祭テーマロゴ" 
+                             class="work-img clickable-img"
+                             data-title="第60回高専祭 テーマロゴ"
+                             data-desc="記念すべき60回目のロゴとして、祝祭感のあるリボンをあしらいました。
+フォントは視認性を保ちつつ、少し崩して遊び心を入れています。">
+                        <p>第60回高専祭 テーマロゴ</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>ポスター制作</h3>
+            
+            <div class="box-003 project-item">
+                <div class="gallery-grid posters">
+                    <div>
+                        <img src="onkyo.jpg" 
+                             alt="ステージイベント" 
+                             class="work-img clickable-img"
+                             data-title="第60回高専祭 ステージイベント募集"
+                             data-desc="基本デザインを担当。目立つ配色と大きな文字配置で、遠くからでもイベント募集とわかるように工夫しました。">
+                    </div>
+                    <div>
+                        <img src="60nazo.jpg" 
+                             alt="謎解きポスター" 
+                             class="work-img clickable-img"
+                             data-title="第60回高専祭 謎解きポスター"
+                             data-desc="ミステリアスな雰囲気を出すために暗めの背景色を採用し、ロゴが際立つようにレイアウトしました。すべて一人でデザインを担当しています。">
+                    </div>
+                    <div>
+                        <img src="kanyu.png" 
+                             alt="学友会勧誘" 
+                             class="work-img clickable-img"
+                             data-title="学友会執行部 勧誘ポスター"
+                             data-desc="新入生に親しみやすさを感じてもらうため、明るい配色とポップなフォントを使用しました。">
+                    </div>
+                    <div>
+                        <img src="genonkanyu.png" 
+                             alt="現代音楽部勧誘" 
+                             class="work-img clickable-img"
+                             data-title="現代音楽部 勧誘ポスター"
+                             data-desc="バンドのかっこよさと、初心者でも入りやすい雰囲気を両立させるデザインを目指しました。">
+                    </div>
+                    <div>
+                        <img src="2025suteibe.png" 
+                             alt="ステージイベント募集" 
+                             class="work-img clickable-img"
+                             data-title="ステージイベント募集ポスター"
+                             data-desc="募集要項を整理し、情報を読み取りやすくデザインしました。">
+                    </div>
+                    <div>
+                        <img src="2025kosensai.png" 
+                             alt="2025高専祭" 
+                             class="work-img clickable-img"
+                             data-title="2025高専祭ポスター"
+                             data-desc="【テーマ：平成レトロポップ】
+あえて画質を荒くしたようなノイズ加工や、蛍光色に近い色使いで平成初期の空気感を表現しました。">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <footer class="footer-001">
+                <h2 class="heading-footer">contact</h2>
+                <p>メールアドレスをクリックするとメーラーが起動します。</p>
+                <nav>
+                    <ul class="footer-001__list">
+                        <li><a href="mailto:rg23066y@st.omu.ac.jp" class="footer-001__link">rg23066@st.omu.ac.jp</a></li>
+                    </ul>
+                </nav>
+            </footer>
+        </section>
+    </main>
+
+    <a class="pagetop" href="#"><div class="pagetop__arrow"></div></a>
+
+    <div class="modal-overlay" id="js-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="js-modal-close">×</button>
+            <h3 class="modal-title" id="js-modal-title">タイトル</h3>
+            <img src="" alt="" class="modal-img" id="js-modal-img">
+            <p class="modal-desc" id="js-modal-desc">説明文</p>
+        </div>
+    </div>
+
+    <script>
+        // ハンバーガーメニューの動作
+        const hamburger = document.getElementById('js-hamburger');
+        const nav = document.getElementById('js-nav');
+
+        if(hamburger) {
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    nav.classList.remove('active');
+                });
+            });
+        }
+
+        // モーダル（画像拡大）の動作
+        const modal = document.getElementById('js-modal');
+        const modalClose = document.getElementById('js-modal-close');
+        const modalTitle = document.getElementById('js-modal-title');
+        const modalImg = document.getElementById('js-modal-img');
+        const modalDesc = document.getElementById('js-modal-desc');
+        const triggers = document.querySelectorAll('.clickable-img');
+
+        triggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const title = trigger.getAttribute('data-title');
+                const desc = trigger.getAttribute('data-desc');
+                const src = trigger.getAttribute('src');
+                
+                modalTitle.textContent = title;
+                modalDesc.textContent = desc;
+                modalImg.setAttribute('src', src);
+                
+                modal.classList.add('active');
+            });
+        });
+
+        if(modalClose) {
+            modalClose.addEventListener('click', () => {
+                modal.classList.remove('active');
+            });
+        }
+
+        if(modal) {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+        }
+    </script>
 
 </body>
+</html>
