@@ -36,15 +36,50 @@
 
     <main>
         <section id="about">
-            <h2 class="heading-40">♡About me♡</h2>
+            <h2 class="heading-40">About me</h2>
             <div class="box-003 center">
                 <p>
-                    公大高専3年　Iコース<br>
-                    現代音楽部<br>♰解き放たれし冥界のモンスター♰<br>
+                    大阪公立大学工業高等専門学校4年生　知能情報コース<br>
+                    現代音楽部<br>
                     ベースとボーカル<br>
-                    学友会執行部　広報課<br>
                     趣味はおいしいものを食べること
                 </p>
+                <div class="more-profile">
+    <button id="js-more-btn" class="more-btn">More Profile / 年表を表示</button>
+    
+    <div id="js-timeline-content" class="timeline-content">
+        <div class="timeline-list">
+            <div class="timeline-item">
+                <div class="timeline-year">2022</div>
+                <div class="timeline-txt">
+                    <strong>大阪公立大学工業高等専門学校 入学</strong><br>
+                    知能情報コースにて情報工学の基礎を学び始める。
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2023</div>
+                <div class="timeline-txt">
+                    <strong>現代音楽部 加入</strong><br>
+                    ベースとボーカルを担当。ライブ運営を通じて、チームで一つのものを作り上げる楽しさを知る。
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2024</div>
+                <div class="timeline-txt">
+                    <strong>学友会執行部 広報課 </strong><br>
+                    Illustratorを用いたポスター制作やイベントロゴ制作を担当。独学でデザインスキルを磨く。
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2025</div>
+                <div class="timeline-txt">
+                    <strong>「欲しい」を形にする開発へ</strong><br>
+                    自作チューナーアプリや家計簿アプリなど、日常の課題を解決するプログラミングに注力。
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
             </div>
         </section>
 
@@ -259,6 +294,23 @@
     </div>
 
     <script>
+
+        // More Profileの開閉動作
+const moreBtn = document.getElementById('js-more-btn');
+const timelineContent = document.getElementById('js-timeline-content');
+
+if(moreBtn) {
+    moreBtn.addEventListener('click', function() {
+        timelineContent.classList.toggle('is-open');
+        
+        // ボタンのテキストを切り替える（お好みで）
+        if (timelineContent.classList.contains('is-open')) {
+            moreBtn.textContent = 'Close / 閉じる';
+        } else {
+            moreBtn.textContent = 'More Profile / 年表を表示';
+        }
+    });
+}
         // ハンバーガーメニューの動作
         const hamburger = document.getElementById('js-hamburger');
         const nav = document.getElementById('js-nav');
