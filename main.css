@@ -489,17 +489,3 @@ html { scroll-behavior: smooth; }
     text-align: right;   /* コンテナの中で右寄せ */
     padding: 0 20px;     /* スマホで見た時に画面端にピタッとくっつくのを防ぐ */
 }
-
-/* プルダウン自体のデザイン（前回と同じ） */
-.sort-select {
-    padding: 5px 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    cursor: pointer;
-    font-family: inherit;
-}
-.sort-select:hover {
-    border-color: #888;
-}
