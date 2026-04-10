@@ -92,108 +92,171 @@
         </section>
 
         <section id="skill">
-            <h2 class="heading-40">skill</h2>
-            <div class="box-003">
-                <h4>プログラミング</h4>
-                <dl class="skill-list">
-                    <dt>Python</dt>
-                    <dd>PySide6を用いたGUIアプリ開発、librosaを用いた音声解析・数値化の実装が可能。</dd>
-                    <dt>Arduino</dt>
-                    <dd>授業でのハードウェア制御経験あり。</dd>
-                    <dt>HTML/CSS</dt>
-                    <dd>レスポンシブデザインに対応した静的サイトの実装。Flexbox/Gridを用いたレイアウト設計。</dd>
-                    <dt>Docker/DockerCompose</dt>
-                    <dd>マルチコンテナ（Nginx + FastAPI）環境の構築・永続化が可能。</dd>
-                    <dt>Nginx</dt>
-                    <dd>リバースプロキシの設定およびクライアント受信サイズ制限等の調整が可能。</dd>
-                    <dt>FastAPI</dt>
-                    <dd>OpenCVを組み合わせた画像処理APIの実装経験。</dd>
-                </dl>
+    <h2 class="heading-40">skill</h2>
+    <div class="box-003">
+        <h4>Web / プログラミング</h4>
+        <dl class="skill-list">
+            <dt>TypeScript / Next.js</dt>
+            <dd>コンポーネント指向のUI設計と開発。SubscList等のWebアプリケーション実装・Vercelへのデプロイが可能。</dd>
+            <dt>Prisma / Supabase</dt>
+            <dd>型安全なデータベーススキーマ設計、およびCRUD機能（登録・編集・削除）を伴うバックエンドロジックの実装。</dd>
+            <dt>Python</dt>
+            <dd>PySide6を用いたGUIアプリ開発、librosaやnumpyを用いた音声解析・数値化の実装が可能。</dd>
+            <dt>FastAPI</dt>
+            <dd>OpenCVを組み合わせた画像処理APIサーバーの実装経験。 [cite: 7]</dd>
+        </dl>
 
-                <h4>デザイン・その他</h4>
-                <dl class="skill-list">
-                    <dt>Illustrator</dt>
-                    <dd>学友会広報課にて、コンセプト立案やロゴ、ポスター、パンフレット制作などを担当。</dd>
-                    <dt>CLIP STUDIO PAINT EX</dt>
-                    <dd>ロゴやUIデザインなどを担当。</dd>
-                </dl>
-            </div>
-        </section>
+        <h4>Infrastructure / Tool</h4>
+        <dl class="skill-list">
+            <dt>Docker / Docker Compose</dt>
+            <dd>NginxとFastAPIを組み合わせたマルチコンテナ環境の構築・永続化が可能。 [cite: 7]</dd>
+            <dt>Nginx</dt>
+            <dd>リバースプロキシの設定、セキュリティに配慮したポート隠蔽、およびクライアント受信サイズの調整が可能。 [cite: 131]</dd>
+            <dt>Git / GitHub</dt>
+            <dd>バージョン管理を用いたチーム開発、およびGitHub上でのソースコード公開・管理。</dd>
+            <dt>Arduino</dt>
+            <dd>授業でのハードウェア制御・電子工作の経験あり。</dd>
+            <dt>HTML/CSS</dt>
+            <dd>レスポンシブデザインに対応した静的サイトの実装。Flexbox/Gridを用いたレイアウト設計。</dd>
+        </dl>
+
+        <h4>デザイン・その他</h4>
+        <dl class="skill-list">
+            <dt>Illustrator</dt>
+            <dd>学友会広報課にて、コンセプト立案からロゴ、ポスター、パンフレット制作までを一貫して担当。</dd>
+            <dt>CLIP STUDIO PAINT EX</dt>
+            <dd>イラスト制作に加え、WebサイトやアプリのUIデザイン、ロゴデザインに使用。</dd>
+        </dl>
+    </div>
+</section>
 
         <section id="projects">
-            <h2 class="heading-40">projects</h2>
+    <h2 class="heading-40">projects</h2>
+    
+    <h3>プログラミング</h3>
+    
+    <div class="sort-container">
+    <label for="js-sort">並び替え：</label>
+    <select id="js-sort" class="sort-select">
+        <option value="desc">新着順（おすすめ）</option>
+        <option value="asc">古い順</option>
+    </select>
+</div>
 
-            <h3>プログラミング</h3>
+    <div id="js-programming-list">
 
-            <div class="box-003 project-item">
-                <h4>プログラミング1課題4<br>アイドルプロデュースゲーム</h4>
-                <a href="https://colab.research.google.com/drive/1HzJR5bcQtUZVFxOQuyU5XK5jdHvtNPS1#scrollTo=m47fJA7hWFj4" target="_blank" class="link-btn">Google Colabを見る</a>
-                <div class="img-container">
-                    <img src="idol.png" alt="アイドル育成ゲーム" class="work-img">
-                </div>
-                <p class="desc">
-                    プログラミング1の自由課題。<br>
-                    アイドルマスターのような育成ゲームをPythonで作成しました。
-                </p>
-            </div>
+    <div class="box-003 project-item" data-date="2026-02">
+        <h4>SubscList - サブスクリプション一括管理Webアプリ</h4>
+        <a href="https://github.com/0205sone/subsc-list" target="_blank" class="link-btn">GitHubを見る</a>
+        
+        <div class="img-container">
+            <img src="subsclist.png" alt="SubscList" 
+                 class="work-img clickable-img"
+                 data-title="SubscList"
+                 data-desc="【開発期間：2026.01.20 〜 2026.02.03】月額・年額が混在するサブスク支出を一元管理。技術選定からDB設計、Vercelへのデプロイまでを独力で行いました。">
+        </div>
+        
+        <p class="desc">
+            <strong>使用技術：Next.js, TypeScript, Prisma, Supabase, Vercel</strong><br>
+            開発期間：2026.01.20 〜 2026.02.03<br>
+            支払いサイクルに応じた自動コスト計算や、CRUD機能（登録・編集・削除）を実装した実用的なWebアプリケーションです。
+        </p>
+    </div>
 
-            <div class="box-003 project-item">
-                <h4>第60回高専祭 知能情報コース展示<br>クイズリバーシ</h4>
-                <a href="https://yurei0903.github.io/power2_7-4-main/" target="_blank" class="link-btn">デモサイトを見る</a>
-                <div class="img-container">
-                    <img src="kuizuriba-si.jpg" alt="クイズリバーシ" class="work-img">
-                </div>
-                <p class="desc">
-                    クイズに正解すると石を置けるリバーシ。<br>
-                    <strong>担当：ロゴ作成、UIデザイン、一部コーディング</strong>
-                </p>
-            </div>
+    <div class="box-003 project-item" data-date="2026-02">
+        <h4>Dockerを用いた画像処理APIサーバーの構築</h4>
+        <a href="https://note.com/riri_614/n/na3d43430436c" target="_blank" class="link-btn">技術解説（note）を見る</a>
+        
+        <div class="img-container">
+            <img src="docker_api.png" alt="Docker APIサーバー" 
+                 class="work-img clickable-img"
+                 data-title="Docker画像処理APIサーバー"
+                 data-desc="【投稿日：2026.02.20】NginxとFastAPIの2コンテナ構成。パッケージの依存関係エラーを解決し、軽量化とセキュリティを担保した設計です。">
+        </div>
+        
+        <p class="desc">
+            <strong>使用技術：Docker, Docker Compose, Nginx, FastAPI, OpenCV</strong><br>
+            Nginxをリバースプロキシとし、FastAPIで画像処理（2値化・グレースケール化）APIをコンテナ化しました。<br>
+            外部からのアクセス制御や環境構築時のトラブルシューティングの過程をnoteにまとめています。
+        </p>
+    </div>
 
-            <div class="box-003 project-item">
-                <h4>ベース用チューナー</h4>
-                <a href="https://github.com/0205sone/bass" target="_blank" class="link-btn">GitHubを見る</a>
-                <div class="img-container">
-                    <img src="bass4.png" alt="ベース用チューナー" class="work-img">
-                </div>
-                <p class="desc">
-                    制作時期：2024年12月～2025年1月<br>
-                    日常使いできるシンプルなチューナーアプリ。<br>
-                    Python (pygame, sounddevice, numpy, librosa) 使用。<br>
-                    マイク入力から周波数を解析し、E,A,D,G音階とのズレを数値化・可視化しました。
-                </p>
-                <div class="sub-images">
-                    <img src="bass1.png" alt="使用イメージ" class="work-img small">
-                    <img src="bass3.png" alt="判定画面" class="work-img small">
-                </div>
-            </div>
+    <div class="box-003 project-item" data-date="2025-02">
+        <h4>家計簿アプリ</h4>
+        <a href="https://github.com/0205sone/kakeibo" target="_blank" class="link-btn">GitHubを見る</a>
+        <p class="desc">
+            制作時期：2025年2月（約10時間）<br>
+            PySide6を使用したGUI家計簿アプリ。<br>
+            CSV保存機能、カレンダー選択、月別集計機能を実装。
+        </p>
+        <div class="img-container">
+            <img src="kakeibo1.png" alt="家計簿アプリメイン画面" class="work-img clickable-img" data-title="GUI家計簿アプリ" data-desc="PySide6を使用し、CSV保存機能、カレンダー選択、月別集計機能を実装しました。">
+        </div>
+        <div class="sub-images">
+            <img src="kakeibo2.png" alt="カレンダー" class="work-img small clickable-img" data-title="カレンダー機能" data-desc="直感的に日付を選択できるUI。">
+            <img src="kakeibo4.png" alt="Excel出力" class="work-img small clickable-img" data-title="Excel出力" data-desc="集計データをCSV/Excel形式で出力可能。">
+        </div>
+    </div>
 
-            <div class="box-003 project-item">
-                <h4>家計簿アプリ</h4>
-                <a href="https://github.com/0205sone/kakeibo" target="_blank" class="link-btn">GitHubを見る</a>
-                <p class="desc">
-                    制作時期：2025年2月（約10時間）<br>
-                    PySide6を使用したGUI家計簿アプリ。<br>
-                    CSV保存機能、カレンダー選択、月別集計機能を実装。
-                </p>
-                <div class="img-container">
-                    <img src="kakeibo1.png" alt="家計簿アプリメイン画面" class="work-img">
-                </div>
-                <div class="sub-images">
-                    <img src="kakeibo2.png" alt="カレンダー" class="work-img small">
-                    <img src="kakeibo4.png" alt="Excel出力" class="work-img small">
-                </div>
-            </div>
-            
-            <div class="box-003 project-item">
-                <h4>あんさんぶるスターズ!!<br>進捗管理サイト</h4>
-                <a href="https://0205sone.github.io/es-todo/" target="_blank" class="link-btn">サイトを見る</a>
-                <div class="img-container">
-                    <img src="estodo.png" alt="あんスタTODO" class="work-img">
-                </div>
-                <p class="desc">
-                    TODOリストを改良し、イベント進捗を管理できるWebアプリを作成。
-                </p>
-            </div>
+    <div class="box-003 project-item" data-date="2024-12">
+        <h4>ベース用チューナー</h4>
+        <a href="https://github.com/0205sone/bass" target="_blank" class="link-btn">GitHubを見る</a>
+        <div class="img-container">
+            <img src="bass4.png" alt="ベース用チューナー" class="work-img clickable-img" data-title="ベース用チューナー" data-desc="マイク入力から周波数を解析し、音階とのズレを数値化・可視化しました。">
+        </div>
+        <p class="desc">
+            制作時期：2024年12月～2025年1月<br>
+            日常使いできるシンプルなチューナーアプリ。<br>
+            Python (pygame, sounddevice, numpy, librosa) を使用し、リアルタイムでの周波数解析を実装しました。
+        </p>
+        <div class="sub-images">
+            <img src="bass1.png" alt="使用イメージ" class="work-img small clickable-img" data-title="使用イメージ" data-desc="実際のアプリケーション画面。">
+            <img src="bass3.png" alt="判定画面" class="work-img small clickable-img" data-title="判定処理" data-desc="ピッチのズレを視覚的にフィードバック。">
+        </div>
+    </div>
+
+    <div class="box-003 project-item" data-date="2025-10">
+        <h4>あんさんぶるスターズ!!<br>進捗管理サイト</h4>
+        <a href="https://0205sone.github.io/es-todo/" target="_blank" class="link-btn">サイトを見る</a>
+        
+        <div class="img-container">
+            <img src="estodo.png" alt="あんスタTODO" 
+                 class="work-img clickable-img" 
+                 data-title="進捗管理サイト" 
+                 data-desc="【制作時期：2025.10.30 〜 2025.11.14】TODOリストを改良し、イベント進捗を管理できるWebアプリを作成。">
+        </div>
+        
+        <p class="desc">
+            制作時期：2025.10.30 〜 2025.11.14（約26時間）<br>
+            TODOリストを改良し、イベント進捗を管理できるWebアプリを作成。
+        </p>
+    </div>
+
+    <div class="box-003 project-item" data-date="2023-12">
+        <h4>プログラミング1課題4<br>アイドルプロデュースゲーム</h4>
+        <a href="https://colab.research.google.com/drive/1HzJR5bcQtUZVFxOQuyU5XK5jdHvtNPS1#scrollTo=m47fJA7hWFj4" target="_blank" class="link-btn">Google Colabを見る</a>
+        <div class="img-container">
+            <img src="idol.png" alt="アイドル育成ゲーム" class="work-img clickable-img" data-title="アイドルプロデュースゲーム" data-desc="Pythonで作成したコンソールベースの育成ゲーム。">
+        </div>
+        <p class="desc">
+            プログラミング1の自由課題。<br>
+            アイドルマスターのような育成ゲームをPythonで作成しました。
+        </p>
+    </div>
+
+    <div class="box-003 project-item" data-date="2024-11">
+        <h4>第60回高専祭 知能情報コース展示<br>クイズリバーシ</h4>
+        <a href="https://yurei0903.github.io/power2_7-4-main/" target="_blank" class="link-btn">デモサイトを見る</a>
+        <div class="img-container">
+            <img src="kuizuriba-si.jpg" alt="クイズリバーシ" class="work-img clickable-img" data-title="クイズリバーシ" data-desc="ロゴ作成、UIデザイン、一部コーディングを担当。">
+        </div>
+        <p class="desc">
+            クイズに正解すると石を置けるリバーシ。<br>
+            <strong>担当：ロゴ作成、UIデザイン、一部コーディング</strong>
+        </p>
+    </div>
+
+</div>
 
             <h3>ロゴデザイン</h3>
             <p class="hint-text">※画像をタップすると詳細が表示されます</p>
@@ -205,11 +268,8 @@
                              alt="謎解きロゴ" 
                              class="work-img clickable-img"
                              data-title="第59回高専祭 謎解きロゴ"
-                             data-desc="【制作意図】
-謎解きのワクワク感を出すため、虫眼鏡と鍵のモチーフを使用しました。
-文字の一部を迷路のように加工し、『解く』楽しさを表現しています。
-
-制作時間：約3時間 / 使用ツール：Illustrator">
+                             data-desc="モノクルや羽ペンをデザインに取り入れ、チェック柄やブラウンを使用し探偵モチーフを表現しました。
+使用ツール：CLIP STUDIO PAINT EX">
                         <p>第59回高専祭 謎解きロゴ</p>
                     </div>
                     <div>
@@ -217,7 +277,8 @@
                              alt="2⁷-4ロゴ" 
                              class="work-img clickable-img"
                              data-title="高専祭展示 2⁷-4ロゴ"
-                             data-desc="展示のテーマに合わせ、デジタル感とスタイリッシュさを意識して作成しました。">
+                             data-desc="数式フォントを使用し、制作したオセロをプレイしている人をモチーフに
+                             に作成しました。使用ツール：CLIP STUDIO PAINT EX">
                         <p>高専祭展示 2⁷-4ロゴ</p>
                     </div>
                     <div>
@@ -225,14 +286,14 @@
                              alt="高専祭テーマロゴ" 
                              class="work-img clickable-img"
                              data-title="第60回高専祭 テーマロゴ"
-                             data-desc="記念すべき60回目のロゴとして、祝祭感のあるリボンをあしらいました。
-フォントは視認性を保ちつつ、少し崩して遊び心を入れています。">
+                             data-desc="テーマカラーの紫を基調とし、インフィニティマークをイメージして作成しました。使用ツール：CLIP STUDIO PAINT EX">
                         <p>第60回高専祭 テーマロゴ</p>
                     </div>
                 </div>
             </div>
 
             <h3>ポスター制作</h3>
+            <p class="hint-text">※画像をタップすると詳細が表示されます</p>
             
             <div class="box-003 project-item">
                 <div class="gallery-grid posters">
@@ -279,6 +340,17 @@
                              data-desc="高専祭のデザインテーマ「平成レトロポップ」をもとにY2Kなどのデザインを参考にして、テーマカラーの紫を基調としたポップなデザインに仕上げました。">
                     </div>
                 </div>
+            </div>
+            <h3>高専祭パンフレット</h3>
+            <div class="box-003 project-item">
+                <a href="https://fes2025.omuct-gakuyukai.com/other/pamphlet.pdf" target="_blank" class="link-btn">パンフレットを見る（印刷用のため実際と色味が異なります）</a>
+                <div class="img-container">
+                    <img src="panhu.png" alt="高専祭パンフレット" class="work-img">
+                </div>
+                <p class="desc">
+                    第60回高専祭のパンフレットを制作しました。<br>
+                    表紙から中面のレイアウト、イラストまで一貫して担当し、テーマカラーの紫を基調としたデザインに仕上げました。
+                </p>
             </div>
         </section>
 
@@ -377,6 +449,35 @@ if(moreBtn) {
                 }
             });
         }
+
+        // プログラミング作品の並び替え（ソート）機能
+const sortSelect = document.getElementById('js-sort');
+const programmingList = document.getElementById('js-programming-list');
+
+if (sortSelect && programmingList) {
+    sortSelect.addEventListener('change', function() {
+        const order = this.value;
+        // プロジェクトの要素をすべて取得して配列に変換
+        const items = Array.from(programmingList.querySelectorAll('.project-item'));
+
+        // 日付（data-date）で並び替え処理
+        items.sort(function(a, b) {
+            const dateA = a.getAttribute('data-date') || '0000-00';
+            const dateB = b.getAttribute('data-date') || '0000-00';
+            
+            if (order === 'desc') {
+                return dateA < dateB ? 1 : -1; // 新着順（降順）
+            } else {
+                return dateA > dateB ? 1 : -1; // 古い順（昇順）
+            }
+        });
+
+        // 並び替えた順にHTMLへ戻す（appendChildすると自動で移動します）
+        items.forEach(function(item) {
+            programmingList.appendChild(item);
+        });
+    });
+}
     </script>
 
 </body>
