@@ -1,8 +1,5 @@
 @charset "utf-8";
 
-/* ====================================
-   基本設定
-   ==================================== */
 * {
     box-sizing: border-box;
 }
@@ -14,7 +11,7 @@ body {
     font-weight: bold;
     color: #333;
     margin: 0;
-    padding-top: 60px; /* ヘッダーの高さ分空ける */
+    padding-top: 60px;
 }
 
 a {
@@ -25,9 +22,6 @@ a:hover {
     opacity: 0.7;
 }
 
-/* ====================================
-   ヘッダー & ハンバーガーメニュー
-   ==================================== */
 .site-header {
     position: fixed;
     top: 0;
@@ -51,7 +45,6 @@ a:hover {
     margin: 0;
 }
 
-/* ナビゲーション（PC用） */
 .navigation ul {
     list-style: none;
     display: flex;
@@ -67,7 +60,6 @@ a:hover {
     font-family: "Dela Gothic One", sans-serif;
 }
 
-/* ハンバーガーボタン（デフォルトは非表示、スマホで表示） */
 .hamburger-menu {
     display: none;
     background: none;
@@ -92,7 +84,6 @@ a:hover {
 .hamburger-line:nth-child(2) { top: 11px; }
 .hamburger-line:nth-child(3) { bottom: 0; }
 
-/* メニューが開いた時のアニメーション */
 .hamburger-menu.active .hamburger-line:nth-child(1) {
     transform: rotate(45deg);
     top: 11px;
@@ -105,7 +96,6 @@ a:hover {
     bottom: 11px;
 }
 
-/* スマホ用のレスポンシブ設定 */
 @media screen and (max-width: 768px) {
     .hamburger-menu {
         display: block;
@@ -140,9 +130,6 @@ a:hover {
     }
 }
 
-/* ====================================
-   メインコンテンツ
-   ==================================== */
 h2.heading-40 {
     font-family: "Dela Gothic One", sans-serif;
     display: inline-block;
@@ -184,18 +171,16 @@ h4 {
 }
 .box-003.center { text-align: center; }
 
-/* プロフィールなどは中央寄せ */
 #about .box-003, #contact .box-003 {
     text-align: center;
 }
 
-/* バンド名の修正（文字つぶれ解消） */
 .band-name {
     font-family: "Dela Gothic One", serif;
-    font-weight: normal; /* 太字解除 */
+    font-weight: normal;
     color: #b7abe9;
     font-size: 1.4rem;
-    letter-spacing: 0.1em; /* 文字間隔 */
+    letter-spacing: 0.1em;
     line-height: 1.6;
     display: block;
     margin: 15px 0;
@@ -208,9 +193,6 @@ h4 {
     margin-bottom: 10px;
 }
 
-/* ====================================
-   作品画像のスタイル
-   ==================================== */
 .work-img {
     width: 100%;
     max-width: 500px;
@@ -244,7 +226,6 @@ h4 {
     text-align: center;
 }
 
-/* クリック可能な画像のスタイル */
 .clickable-img {
     cursor: pointer;
     transition: transform 0.2s, opacity 0.2s;
@@ -283,9 +264,6 @@ h4 {
     font-size: 0.95em;
 }
 
-/* ====================================
-   フッター
-   ==================================== */
 .footer-001 {
     margin-top: 60px;
     padding: 40px 10px;
@@ -304,9 +282,6 @@ h4 {
     text-decoration: underline;
 }
 
-/* ====================================
-   ページトップボタン
-   ==================================== */
 html { scroll-behavior: smooth; }
 
 .pagetop {
@@ -338,9 +313,6 @@ html { scroll-behavior: smooth; }
     border-color: #fff;
 }
 
-/* ====================================
-   モーダル（ポップアップ）
-   ==================================== */
 .modal-overlay {
     display: none;
     position: fixed;
@@ -409,12 +381,11 @@ html { scroll-behavior: smooth; }
     white-space: pre-wrap;
 }
 
-/* ボタンのスタイル */
 .more-btn {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #b7abe9;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -426,19 +397,17 @@ html { scroll-behavior: smooth; }
     background-color: #555;
 }
 
-/* 年表の隠し設定 */
 .timeline-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-out; /* アニメーション */
+    transition: max-height 0.5s ease-out;
     margin-top: 20px;
 }
 
 .timeline-content.is-open {
-    max-height: 1000px; /* 十分な高さを指定 */
+    max-height: 1000px;
 }
 
-/* 年表の見た目（シンプル） */
 .timeline-list {
     border-left: 2px solid #ccc;
     margin-left: 20px;
@@ -468,7 +437,6 @@ html { scroll-behavior: smooth; }
     font-size: 0.9em;
 }
 
-/* ソート機能のセレクトボックス装飾 */
 .sort-select {
     padding: 5px 10px;
     font-size: 1rem;
@@ -482,10 +450,9 @@ html { scroll-behavior: smooth; }
     border-color: #888;
 }
 
-/* 並び替えコンテナのレイアウト調整 */
 .sort-container {
-    max-width: 800px;    /* 下のbox-003の幅に合わせる（合わなければ数値を微調整してください） */
-    margin: 0 auto 20px; /* 全体を中央寄せ（0 auto）にして、下部に20pxの余白 */
-    text-align: right;   /* コンテナの中で右寄せ */
-    padding: 0 20px;     /* スマホで見た時に画面端にピタッとくっつくのを防ぐ */
+    max-width: 800px;    
+    margin: 0 auto 20px; 
+    text-align: right;   
+    padding: 0 20px;    
 }

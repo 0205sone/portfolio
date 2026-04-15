@@ -181,6 +181,24 @@
         </p>
     </div>
 
+    
+    <div class="box-003 project-item" data-date="2025-10">
+        <h4>あんさんぶるスターズ!!<br>進捗管理サイト</h4>
+        <a href="https://0205sone.github.io/es-todo/" target="_blank" class="link-btn">サイトを見る</a>
+        
+        <div class="img-container">
+            <img src="estodo.png" alt="あんスタTODO" 
+                 class="work-img clickable-img" 
+                 data-title="進捗管理サイト" 
+                 data-desc="【制作時期：2025.10.30 〜 2025.11.14】TODOリストを改良し、イベント進捗を管理できるWebアプリを作成。">
+        </div>
+        
+        <p class="desc">
+            制作時期：2025.10.30 〜 2025.11.14（約26時間）<br>
+            TODOリストを改良し、イベント進捗を管理できるWebアプリを作成。
+        </p>
+    </div>
+
     <div class="box-003 project-item" data-date="2025-02">
         <h4>家計簿アプリ</h4>
         <a href="https://github.com/0205sone/kakeibo" target="_blank" class="link-btn">GitHubを見る</a>
@@ -215,22 +233,19 @@
         </div>
     </div>
 
-    <div class="box-003 project-item" data-date="2025-10">
-        <h4>あんさんぶるスターズ!!<br>進捗管理サイト</h4>
-        <a href="https://0205sone.github.io/es-todo/" target="_blank" class="link-btn">サイトを見る</a>
-        
+    
+    <div class="box-003 project-item" data-date="2024-11">
+        <h4>第60回高専祭 知能情報コース展示<br>クイズリバーシ</h4>
+        <a href="https://yurei0903.github.io/power2_7-4-main/" target="_blank" class="link-btn">デモサイトを見る</a>
         <div class="img-container">
-            <img src="estodo.png" alt="あんスタTODO" 
-                 class="work-img clickable-img" 
-                 data-title="進捗管理サイト" 
-                 data-desc="【制作時期：2025.10.30 〜 2025.11.14】TODOリストを改良し、イベント進捗を管理できるWebアプリを作成。">
+            <img src="kuizuriba-si.jpg" alt="クイズリバーシ" class="work-img clickable-img" data-title="クイズリバーシ" data-desc="ロゴ作成、UIデザイン、一部コーディングを担当。">
         </div>
-        
         <p class="desc">
-            制作時期：2025.10.30 〜 2025.11.14（約26時間）<br>
-            TODOリストを改良し、イベント進捗を管理できるWebアプリを作成。
+            クイズに正解すると石を置けるリバーシ。<br>
+            <strong>担当：ロゴ作成、UIデザイン、一部コーディング</strong>
         </p>
     </div>
+
 
     <div class="box-003 project-item" data-date="2023-12">
         <h4>プログラミング1課題4<br>アイドルプロデュースゲーム</h4>
@@ -244,17 +259,6 @@
         </p>
     </div>
 
-    <div class="box-003 project-item" data-date="2024-11">
-        <h4>第60回高専祭 知能情報コース展示<br>クイズリバーシ</h4>
-        <a href="https://yurei0903.github.io/power2_7-4-main/" target="_blank" class="link-btn">デモサイトを見る</a>
-        <div class="img-container">
-            <img src="kuizuriba-si.jpg" alt="クイズリバーシ" class="work-img clickable-img" data-title="クイズリバーシ" data-desc="ロゴ作成、UIデザイン、一部コーディングを担当。">
-        </div>
-        <p class="desc">
-            クイズに正解すると石を置けるリバーシ。<br>
-            <strong>担当：ロゴ作成、UIデザイン、一部コーディング</strong>
-        </p>
-    </div>
 
 </div>
 
@@ -380,7 +384,6 @@
 
     <script>
 
-        // More Profileの開閉動作
 const moreBtn = document.getElementById('js-more-btn');
 const timelineContent = document.getElementById('js-timeline-content');
 
@@ -388,7 +391,7 @@ if(moreBtn) {
     moreBtn.addEventListener('click', function() {
         timelineContent.classList.toggle('is-open');
         
-        // ボタンのテキストを切り替える（お好みで）
+    
         if (timelineContent.classList.contains('is-open')) {
             moreBtn.textContent = 'Close / 閉じる';
         } else {
@@ -414,7 +417,6 @@ if(moreBtn) {
             });
         }
 
-        // モーダル（画像拡大）の動作
         const modal = document.getElementById('js-modal');
         const modalClose = document.getElementById('js-modal-close');
         const modalTitle = document.getElementById('js-modal-title');
@@ -450,29 +452,25 @@ if(moreBtn) {
             });
         }
 
-        // プログラミング作品の並び替え（ソート）機能
 const sortSelect = document.getElementById('js-sort');
 const programmingList = document.getElementById('js-programming-list');
 
 if (sortSelect && programmingList) {
     sortSelect.addEventListener('change', function() {
         const order = this.value;
-        // プロジェクトの要素をすべて取得して配列に変換
         const items = Array.from(programmingList.querySelectorAll('.project-item'));
 
-        // 日付（data-date）で並び替え処理
         items.sort(function(a, b) {
             const dateA = a.getAttribute('data-date') || '0000-00';
             const dateB = b.getAttribute('data-date') || '0000-00';
             
             if (order === 'desc') {
-                return dateA < dateB ? 1 : -1; // 新着順（降順）
+                return dateA < dateB ? 1 : -1; 
             } else {
-                return dateA > dateB ? 1 : -1; // 古い順（昇順）
+                return dateA > dateB ? 1 : -1; 
             }
         });
 
-        // 並び替えた順にHTMLへ戻す（appendChildすると自動で移動します）
         items.forEach(function(item) {
             programmingList.appendChild(item);
         });
